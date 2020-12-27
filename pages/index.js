@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Date from '../components/date';
+import Translation from '../components/translation';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 
@@ -23,7 +24,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Welcome to my Learnatorium. This is where the magic happens.
+          Welcome to my Learnatorium. This is where the <Translation translation="nonsense">magic</Translation> happens.
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
