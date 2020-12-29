@@ -24,6 +24,8 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.headingMd}>
         <p>
           Welcome to my Learnatorium. This is where the magic happens.
+        </p>
+        <p>
           <Link href={'일기'}>check out my diary</Link>
         </p>
       </section>
