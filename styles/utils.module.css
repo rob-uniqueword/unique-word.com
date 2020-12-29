@@ -50,3 +50,13 @@
 .lightText {
   color: #999;
 }
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexColumn {
+  flex: 50%;
+  padding: 1em;
+}
