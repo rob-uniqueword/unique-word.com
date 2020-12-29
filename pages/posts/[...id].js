@@ -2,11 +2,11 @@ import Layout from '../../components/layout'
 import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import { getPostPaths, getPostData, allPostsStartPathArray } from '../../lib/posts'
 import { k_dictionary, getTranslation } from '../../lib/translation'
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds()
+  const paths = await getPostPaths(allPostsStartPathArray);
   return {
     paths,
     fallback: false

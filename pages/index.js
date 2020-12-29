@@ -4,10 +4,10 @@ import Date from '../components/date';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 
-import { getSortedPostsData } from '../lib/posts';
+import { getSortedPostsMetaData, allPostsStartPathArray } from '../lib/posts';
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsMetaData(allPostsStartPathArray);
   return {
     props: {
       allPostsData
@@ -30,13 +30,15 @@ export default function Home({ allPostsData }) {
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
+            <li className={utilStyles.listItem} key={id.join('/')}>
+              <Link href={`/posts/${id.join('/')}`}>
                 <a>{title}</a>
               </Link>
               <br/>
+              <small className={utilStyles.lightText}>{id.join('/')}</small>
+              <br/>
               <small className={utilStyles.lightText}>
-                <Date dateString={date} />
+                <Date dateString={date}/>
               </small>
             </li>          
           ))}
