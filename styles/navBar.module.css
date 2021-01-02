@@ -1,0 +1,17 @@
+.navBar {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5em;
+    padding: 0.25em;
+    min-width: 100%;
+    background-color: var(--site-colour);
+}
+
+.navLink {
+    flex: 50%;
+    padding: 0.5em;
+    margin: 0.25em;
+    background-color: white;
+    text-align: center;
+    min-width: fit-content;
+}

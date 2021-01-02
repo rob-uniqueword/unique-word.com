@@ -1,3 +1,7 @@
+:root {
+    --site-colour: rgb(255, 224, 240);
+}
+
 html,
 body {
     padding: 0;
@@ -6,6 +10,12 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     line-height: 1.6;
     font-size: 18px;
+    background-color: var(--site-colour);
+    height: 100%;
+}
+
+div#__next {
+    height: 100%;
 }
 
 * {
@@ -42,6 +52,7 @@ img {
     bottom: 150%;
     left: 50%;
     z-index: 1;
+    min-width: max-content;
 
     opacity: 0;
     transition: opacity 1s;
