@@ -10,6 +10,9 @@ export default function NavBar() {
             <Link href={encodeURI('/일기')}>
                 <a className={navBarStyles.navLink}>일기</a>
             </Link>
+            <Link href={encodeURI('/food')}>
+                <a className={navBarStyles.navLink}>Food</a>
+            </Link>
         </div>
     )
 }

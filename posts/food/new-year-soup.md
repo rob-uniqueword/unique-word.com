@@ -3,7 +3,7 @@ title: '떡국 (New Year Soup)'
 date: '2021-01-01'
 ---
 
-![New Year Soup](/images/new-year-soup.jpg)
+![New Year Soup](/images/food/new-year-soup.jpg)
 
 ### Soup
 
