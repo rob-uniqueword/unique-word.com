@@ -3,6 +3,8 @@ title: '떡국 (New Year Soup)'
 date: '2021-01-01'
 ---
 
+![New Year Soup](/images/new-year-soup.jpg)
+
 ### Soup
 
 1. Prepare veg:
