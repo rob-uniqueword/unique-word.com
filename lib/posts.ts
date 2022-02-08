@@ -35,7 +35,7 @@ export async function getPostPaths(
   for await (const pathArray of pathArrays) {
     results.push({
       params: {
-        id: pathArray.map((string) => encodeURI(string)),
+        id: pathArray.map((string) => string),
       },
     });
   }
