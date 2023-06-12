@@ -56,7 +56,8 @@ export async function getPostData(pathArray: string[]): Promise<IPost> {
   return {
     id: pathArray,
     contentHtml,
-    ...matterResult.data,
+    title: matterResult.data.title,
+    date: matterResult.data.date,
   };
 }
 
@@ -73,7 +74,8 @@ export async function getSortedPostsMetaData(
 
     postData.push({
       id: pathArray,
-      ...headers,
+      title: headers.title,
+      date: headers.date,
     });
   }
 
@@ -92,7 +94,7 @@ export async function getSortedPostsMetaData(
 
 export interface IPost {
   id: string[];
-  title?: string;
-  date?: string;
+  title: string;
+  date: string;
   contentHtml?: string;
 }

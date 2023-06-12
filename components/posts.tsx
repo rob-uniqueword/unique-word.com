@@ -2,8 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Date from "./date";
 import utilStyles from "../styles/utils.module.css";
+import { IPost } from "../lib/posts";
 
-export default function Posts({ postData }: { postData: IPostData[] }) {
+export default function Posts({ postData }: { postData: IPost[] }) {
   return (
     <ul className={utilStyles.list}>
       {postData.map(({ id, date, title }) => (
@@ -13,16 +14,10 @@ export default function Posts({ postData }: { postData: IPostData[] }) {
           </Link>
           <br />
           <small className={utilStyles.lightText}>
-            {id.join("/")} - <Date dateString={date} />
+            {id.join("/")} - <Date dateString={date!} />
           </small>
         </li>
       ))}
     </ul>
   );
-}
-
-export interface IPostData {
-  id: string[];
-  title: string;
-  date: string;
 }
