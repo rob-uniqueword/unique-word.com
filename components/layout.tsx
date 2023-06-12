@@ -30,13 +30,13 @@ export default function Layout({
       </Head>
       <header className={layoutStyles.header}>
         <Link href="/">
-          <a>
-            <img
-              src="/images/mystic-power.png"
-              className={`${layoutStyles.headerImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-          </a>
+
+          <img
+            src="/images/mystic-power.png"
+            className={`${layoutStyles.headerImage} ${utilStyles.borderCircle}`}
+            alt={name}
+          />
+
         </Link>
         <NavBar />
       </header>
@@ -44,7 +44,7 @@ export default function Layout({
       {!home && (
         <div className={layoutStyles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            ← Back to home
           </Link>
         </div>
       )}

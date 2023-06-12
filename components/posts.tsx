@@ -10,7 +10,7 @@ export default function Posts({ postData }: { postData: IPost[] }) {
       {postData.map(({ id, date, title }) => (
         <li className={utilStyles.listItem} key={id.join("/")}>
           <Link href={`/posts/${id.join("/")}`}>
-            <a>{title}</a>
+            {title}
           </Link>
           <br />
           <small className={utilStyles.lightText}>

@@ -4,14 +4,14 @@ import navBarStyles from "../styles/navBar.module.css";
 export default function NavBar(): JSX.Element {
   return (
     <div className={navBarStyles.navBar}>
-      <Link href={encodeURI("/")}>
-        <a className={navBarStyles.navLink}>Home</a>
+      <Link href={encodeURI("/")} className={navBarStyles.navLink}>
+        Home
       </Link>
-      <Link href={encodeURI("/일기")}>
-        <a className={navBarStyles.navLink}>일기</a>
+      <Link href={encodeURI("/일기")} className={navBarStyles.navLink}>
+        일기
       </Link>
-      <Link href={encodeURI("/food")}>
-        <a className={navBarStyles.navLink}>Food</a>
+      <Link href={encodeURI("/food")} className={navBarStyles.navLink}>
+        Food
       </Link>
     </div>
   );
